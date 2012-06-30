@@ -24,6 +24,12 @@ function(
 
       var charmerButtonView = new CharmerButtonView();
       $html.append($('<li>').append(charmerButtonView.render().el));
+      var charmerButtonView = new CharmerButtonView();
+      $html.append($('<li>').append(charmerButtonView.render().el));
+      var charmerButtonView = new CharmerButtonView();
+      $html.append($('<li>').append(charmerButtonView.render().el));
+      var charmerButtonView = new CharmerButtonView();
+      $html.append($('<li>').append(charmerButtonView.render().el));
 
       var navigatorView = new NavigatorView();
       $html.append(navigatorView.render().el);

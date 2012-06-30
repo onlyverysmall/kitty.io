@@ -4,7 +4,6 @@ define([
 , 'backbone'
 , 'views/video'
 , 'views/controls'
-, 'text!templates/app.html'
 ],
 function(
   $
@@ -12,21 +11,15 @@ function(
 , Backbone
 , VideoView
 , ControlsView
-, AppTemplate
 ) {
 
   var AppView = Backbone.View.extend({
 
-    template: _.template(AppTemplate)
-
-  , initialize: function() {
+    initialize: function() {
       this.setElement('#app');
     }
 
   , render: function() {
-      var html = this.template();
-      this.$el.html(html);
-
       var videoView = new VideoView();
       this.$el.find('#app_video').html(videoView.render().el);
 

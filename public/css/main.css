@@ -1,0 +1,33 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#hero-unit h1 {
+  text-align: center;
+}
+
+#controls {
+  list-style: none;
+  display: inline;
+}
+
+#controls li {
+  display: inline;
+  float: left;
+}
+
+#controls button {
+  margin: 17px;
+}
+
+.control {
+  width: 200px;
+  height: 200px;
+}
+
+#mjpeg_video {
+  width: 940px;
+  height: 525px;
+}
+
