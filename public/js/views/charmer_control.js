@@ -3,22 +3,22 @@ define([
 , 'underscore'
 , 'backbone'
 , 'models/charmer'
-, 'text!templates/charmer_button.html'
+, 'text!templates/charmer_control.html'
 ],
 function(
   $
 , _
 , Backbone
 , Charmer
-, CharmerButtonTemplate
+, CharmerControlTemplate
 ) {
 
-  var CharmerButtonView = Backbone.View.extend({
+  var CharmerControlView = Backbone.View.extend({
 
-    template: _.template(CharmerButtonTemplate)
+    template: _.template(CharmerControlTemplate)
 
   , events: {
-      'click #charmer_button': 'charm'
+      'click #charmer_control': 'charm'
     }
 
   , initialize: function() {
@@ -38,6 +38,6 @@ function(
 
   });
 
-  return CharmerButtonView;
+  return CharmerControlView;
 });
 

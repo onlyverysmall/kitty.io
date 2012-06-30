@@ -3,22 +3,22 @@ define([
 , 'underscore'
 , 'backbone'
 , 'models/laser_pointer'
-, 'text!templates/laser_pointer_button.html'
+, 'text!templates/laser_pointer_control.html'
 ],
 function(
   $
 , _
 , Backbone
 , LaserPointer
-, LaserPointerButtonTemplate
+, LaserPointerControlTemplate
 ) {
 
-  var LaserPointerButtonView = Backbone.View.extend({
+  var LaserPointerControlView = Backbone.View.extend({
 
-    template: _.template(LaserPointerButtonTemplate)
+    template: _.template(LaserPointerControlTemplate)
 
   , events: {
-      'click #laser_pointer_button': 'startLaserPointer'
+      'click #laser_pointer_control': 'startLaserPointer'
     }
 
   , initialize: function() {
@@ -38,7 +38,7 @@ function(
 
   });
 
-  return LaserPointerButtonView;
+  return LaserPointerControlView;
 });
 
 

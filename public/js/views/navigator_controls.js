@@ -3,19 +3,19 @@ define([
 , 'underscore'
 , 'backbone'
 , 'models/navigator'
-, 'text!templates/navigator.html'
+, 'text!templates/navigator_controls.html'
 ],
 function(
   $
 , _
 , Backbone
 , Navigator
-, NavigatorTemplate
+, NavigatorControlsTemplate
 ) {
 
-  var NavigatorView = Backbone.View.extend({
+  var NavigatorControlsView = Backbone.View.extend({
 
-    template: _.template(NavigatorTemplate)
+    template: _.template(NavigatorControlsTemplate)
 
   , initialize: function() {
       var that = this;
@@ -53,6 +53,6 @@ function(
 
   });
 
-  return NavigatorView;
+  return NavigatorControlsView;
 });
 

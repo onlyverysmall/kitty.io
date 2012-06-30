@@ -2,23 +2,23 @@ define([
   'jquery'
 , 'underscore'
 , 'backbone'
-, 'views/charmer_button'
-, 'views/laser_pointer_button'
-, 'views/treat_dispenser_button'
-, 'views/navigator'
+, 'views/charmer_control'
+, 'views/laser_pointer_control'
+, 'views/treat_dispenser_control'
+, 'views/navigator_controls'
 , 'text!templates/controls.html'
-, 'text!templates/coming_soon_button.html'
+, 'text!templates/coming_soon_control.html'
 ],
 function(
   $
 , _
 , Backbone
-, CharmerButtonView
-, LaserPointerButtonView
-, TreatDispenserButtonView
-, NavigatorView
+, CharmerControlView
+, LaserPointerControlView
+, TreatDispenserControlView
+, NavigatorControlsView
 , ControlsTemplate
-, ComingSoonButtonTemplate
+, ComingSoonControlTemplate
 ) {
 
   var ControlsView = Backbone.View.extend({
@@ -26,18 +26,18 @@ function(
     template: _.template(ControlsTemplate)
 
   , render: function() {
+      var charmerControlView        = new CharmerControlView()
+        , laserPointerControlView   = new LaserPointerControlView()
+        , treatDispenserControlView = new TreatDispenserControlView()
+        , navigatorControlsView     = new NavigatorControlsView()
+        ;
+
       var $html = $(this.template());
-
-      var charmerButtonView = new CharmerButtonView();
-      $html.append($('<li>').append(charmerButtonView.render().el));
-      var laserPointerButtonView = new LaserPointerButtonView();
-      $html.append($('<li>').append(laserPointerButtonView.render().el));
-      var treatDispenserButtonView = new TreatDispenserButtonView();
-      $html.append($('<li>').append(treatDispenserButtonView.render().el));
-      $html.append($('<li>').append(ComingSoonButtonTemplate));
-
-      var navigatorView = new NavigatorView();
-      $html.append(navigatorView.render().el);
+      $html.append($('<li>').append(charmerControlView.render().el))
+      $html.append($('<li>').append(laserPointerControlView.render().el))
+      $html.append($('<li>').append(treatDispenserControlView.render().el))
+      $html.append($('<li>').append(ComingSoonControlTemplate))
+      $html.append(navigatorControlsView.render().el);
 
       this.$el.html($html);
       return this;

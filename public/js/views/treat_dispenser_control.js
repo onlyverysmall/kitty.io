@@ -3,22 +3,22 @@ define([
 , 'underscore'
 , 'backbone'
 , 'models/treat_dispenser'
-, 'text!templates/treat_dispenser_button.html'
+, 'text!templates/treat_dispenser_control.html'
 ],
 function(
   $
 , _
 , Backbone
 , TreatDispenser
-, TreatDispenserButtonTemplate
+, TreatDispenserControlTemplate
 ) {
 
-  var TreatDispenserButtonView = Backbone.View.extend({
+  var TreatDispenserControlView = Backbone.View.extend({
 
-    template: _.template(TreatDispenserButtonTemplate)
+    template: _.template(TreatDispenserControlTemplate)
 
   , events: {
-      'click #treat_dispenser_button': 'treat'
+      'click #treat_dispenser_control': 'treat'
     }
 
   , initialize: function() {
@@ -38,6 +38,6 @@ function(
 
   });
 
-  return TreatDispenserButtonView;
+  return TreatDispenserControlView;
 });
 
