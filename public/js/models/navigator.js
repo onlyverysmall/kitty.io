@@ -50,7 +50,7 @@ function(
   var Navigator = Backbone.Model.extend({
 
     defaults: {
-      enabled: false
+      enabled: true
     }
 
   , forward: function() {

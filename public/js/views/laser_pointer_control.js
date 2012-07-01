@@ -23,17 +23,25 @@ function(
 
   , initialize: function() {
       this.model = new LaserPointer();
+      this.model.on('change:enabled', this.toggleEnabled.bind(this));
     }
 
   , render: function() {
       var html = this.template();
       this.$el.html(html);
 
+      this.$el.find('#laser_pointer_control')
+        .prop('disabled', !this.model.get('enabled'));
+
       return this;
     }
 
   , startLaserPointer: function() {
       this.model.pointLaser();
+    }
+
+  , toggleEnabled: function() {
+      this.render();
     }
 
   });

@@ -8,7 +8,7 @@ function(
   var Charmer = Backbone.Model.extend({
 
     defaults: {
-      enabled: false
+      enabled: true
     }
 
   , charm: function() {

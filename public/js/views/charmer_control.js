@@ -23,17 +23,25 @@ function(
 
   , initialize: function() {
       this.model = new Charmer();
+      this.model.on('change:enabled', this.toggleEnabled.bind(this));
     }
 
   , render: function() {
       var html = this.template();
       this.$el.html(html);
 
+      this.$el.find('#charmer_control')
+        .prop('disabled', !this.model.get('enabled'));
+
       return this;
     }
 
   , charm: function() {
       this.model.charm();
+    }
+
+  , toggleEnabled: function() {
+      this.render();
     }
 
   });
