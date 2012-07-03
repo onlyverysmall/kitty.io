@@ -111,6 +111,10 @@ rosrun rosbridge rosbridge.py
 rosrun mjpeg_server mjpeg_server
 ```
 
+A [static server](https://gist.github.com/3037480) will need to be set up to
+serve the site and the video URL should point to the IP address of the
+mjpeg_server.
+
 ## What's Next
 
 Kitty.io is still early and very much a Work In Progress. A few of the upcoming
