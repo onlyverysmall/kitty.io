@@ -7,7 +7,7 @@ sheltered cats.
 
 The site is not available to the public yet, but the code is available now.
 
-![Screenshot of Kitty.io](./images/screenshot.jpg)
+![Screenshot of Kitty.io](https://github.com/baalexander/kitty.io/raw/master/images/screenshot.png)
 (Don't worry, I have hired a UX designer)
 
 ## Table of Contents
