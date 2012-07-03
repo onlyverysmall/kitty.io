@@ -5,6 +5,8 @@ between the human operators and the cat subjects. As the robot will be placed in
 an animal shelter, the ultimate objective is to boost adoption rates of
 sheltered cats.
 
+The site is not available to the public yet, but the code is available now.
+
 ![Screenshot of Kitty.io](./images/screenshot.jpg)
 (Don't worry, I have hired a UX designer)
 
