@@ -53,19 +53,19 @@ Kitty.io. The key components include:
    directly.
 
  * Views - Every visual component of the web app is represented as a Backbone
-   view. The views are responsible for listening to user events like clicks and
-   passing interacting with an underlying model.
+   view. The views are responsible for listening to user events (like clicks) and
+   interacting with an underlying model.
 
    The Treat Dispenser button view, for instance, is backed by a TreatDispenser
-   model. The view listens for when a user clicks the "Treat" button and when
+   model. The view listens for when a user clicks the "Treat" button, and when
    clicked, calls the TreatDispenser model's dispenseTreat().
 
    The Treat Dispenser button view also listens for changes from the model. If
    the user is no longer allowed to access the TreatDispenser, the
-   TreatDispenser emits an disabled event that causes the button view to
-   automatically changed the HTML button to disabled.
+   TreatDispenser emits a disabled event that causes the button view to
+   automatically change the HTML button to disabled.
 
- * Templates - Backbone views are more like "view controllers". The actual HTML
+ * Templates - Backbone views are more like "view controllers." The actual HTML
    templates are separated as individual HTML files.
 
 #### AMD
@@ -80,18 +80,18 @@ js/
   models/  - All app models, like Navigator, User, and TreatDispenser
   views/   - All app views, like button views or the video player view
   main.js  - require.js configuration and app entry point
-  app.js   - The app bootstrap logic, including which initial views to load.
+  app.js   - The app bootstrap logic, including which initial views to load
   ros.js   - Wrapper around the ros.js library so all modules can load the same
-             ros instance.
+             ros instance
 templates/ - HTML template files
 ```
 
 The models and views follow the [Asynchronous Module
 Definition](http://requirejs.org/docs/whyamd.html#amd)(AMD). Using
 [require.js](http://requirejs.org/), an AMD loader, each module, view, or other
-JavaScript file can specify only the JavaScript modules they depend on.
+JavaScript file can specify only the JavaScript modules it depends on.
 Require.js handles these dependencies and loads in the correct JavaScript files
-and even HTML templates as needed.
+and HTML templates as needed.
 
 #### Testing
 
