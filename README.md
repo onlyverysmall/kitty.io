@@ -97,7 +97,7 @@ and even HTML templates as needed.
 
 A big advantage of separating the view logic from the models is easier testing.
 While not yet implemented, I have had good luck using
-[mocha.js](http://visionmedia.github.com/mocha/) to test Backbone models
+[mocha.js](http://mochajs.org/) to test Backbone models
 independently of presentation level changes.
 
 ## How To Run
